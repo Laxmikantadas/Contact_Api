@@ -1,0 +1,29 @@
+<section class="bg-gray-100 py-12 h-[80vh] flex items-center justify-center">
+  <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
+    {{#if payload}}
+    <!-- Contact Info -->
+    <h1 class="text-3xl font-extrabold text-center text-indigo-600 mb-6">
+      Contact Info
+    </h1>
+    <ul class="space-y-4 text-lg text-gray-800">
+      <li>
+        <span class="font-semibold text-indigo-600">First Name:</span> {{payload.fname}}
+      </li>
+      <li>
+        <span class="font-semibold text-indigo-600">Last Name:</span> {{payload.lname}}
+      </li>
+      <li>
+        <span class="font-semibold text-indigo-600">Number:</span> {{payload.nmbr}}
+      </li>
+      <li>
+        <span class="font-semibold text-indigo-600">Saved Location:</span> {{payload.loc}}
+      </li>
+    </ul>
+    {{else}}
+    <!-- No Contact Found -->
+    <h1 class="text-2xl font-semibold text-center text-gray-500">
+      No Such Contact
+    </h1>
+    {{/if}}
+  </div>
+</section>
